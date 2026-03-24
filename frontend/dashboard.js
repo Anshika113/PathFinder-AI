@@ -1,3 +1,4 @@
+const BASE_URL = "https://pathfinder-ai-1hl5.onrender.com"
 let careerChart, growthChart, marketChart
 
 /* ================= ANALYZE ================= */
@@ -9,7 +10,7 @@ let skills=document.getElementById("skills").value
 
 let experience=parseInt(document.getElementById("experience").value || 1)
 
-let res=await fetch("http://127.0.0.1:5000/api/analyze",{
+let res=await fetch(`${BASE_URL}/api/analyze`,{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({skills,experience})
@@ -127,7 +128,7 @@ if(!file) return alert("Upload file")
 let form=new FormData()
 form.append("resume",file)
 
-let res=await fetch("http://127.0.0.1:5000/api/resume",{
+let res=await fetch(`${BASE_URL}/api/resume`,{
 method:"POST",
 body:form
 })
@@ -158,7 +159,7 @@ try{
 let user=document.getElementById("githubUser").value.trim()
 if(!user) return alert("Enter username")
 
-let res=await fetch("http://127.0.0.1:5000/api/github",{
+let res=await fetch(`${BASE_URL}/api/github`,{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({username:user})
@@ -197,7 +198,7 @@ if(!input) return alert("Enter projects")
 
 let projects=input.split(",").map(p=>p.trim())
 
-let res=await fetch("http://127.0.0.1:5000/api/portfolio",{
+let res=await fetch(`${BASE_URL}/api/portfolio`,{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({projects})
@@ -228,7 +229,7 @@ return
 
 document.getElementById("mentorAnswer").innerText="Thinking..."
 
-let res=await fetch("http://127.0.0.1:5000/api/mentor",{
+let res=await fetch(`${BASE_URL}/api/mentor`,{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body: JSON.stringify({
