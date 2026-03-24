@@ -1,9 +1,6 @@
 class InterviewPreparationEngine:
-
     def generate(self, career):
-
         return {
-
             "python_questions":[
                 "Explain decorators",
                 "Difference between list and tuple",

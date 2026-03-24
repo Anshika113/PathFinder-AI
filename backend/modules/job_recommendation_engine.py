@@ -1,27 +1,17 @@
 import json
 import os
-
 class JobRecommendationEngine:
-
     def __init__(self):
-
         BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
         file_path = os.path.join(BASE_DIR, "data", "jobs_dataset.json")
-
         with open(file_path, "r", encoding="utf-8") as f:
             self.jobs = json.load(f)
 
     def recommend(self, skills):
-
         matched_jobs = []
-
         for job in self.jobs:
-
             required = job["required_skills"]
-
             match_score = len(set(skills) & set(required))
-
             if match_score > 0:
                 matched_jobs.append({
                     "job_title": job["job_title"],

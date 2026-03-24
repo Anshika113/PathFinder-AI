@@ -2,7 +2,6 @@ import json
 import os
 
 class AICareerMentor:
-
     def __init__(self):
         base_path = os.path.dirname(__file__)
         file_path = os.path.join(base_path, "..", "data", "jobs_dataset.json")
@@ -90,86 +89,52 @@ class AICareerMentor:
         # 👉 START ROADMAP
         if "start" in question:
             return {
-                "answer": f"""
-Start with fundamentals → Python + core concepts.
-
-Then move towards {title}:
-
-Required skills:
-{', '.join(skills_needed)}
-
-Missing skills (focus here):
-{', '.join(missing) if missing else "None"}
-
-Steps:
-- Learn basics properly
-- Build 2–3 projects
-- Practice consistently
-
-Salary: {salary}
-"""
+                "answer": f"""Start with fundamentals → Python + core concepts.
+                Then move towards {title}:
+                Required skills:{', '.join(skills_needed)}
+                Missing skills (focus here):{', '.join(missing) if missing else "None"}
+                Steps:
+                - Learn basics properly
+                - Build 2–3 projects
+                - Practice consistently
+                Salary: {salary}"""
             }
 
         # 👉 RESUME
         if "resume" in question:
             return {
-                "answer": f"""
-To improve your resume for {title}:
-
-- Add projects using: {', '.join(list(matched)[:3])}
-- Focus on measurable results (accuracy, performance)
-- Add GitHub + real-world work
-
-Missing skills to include:
-{', '.join(missing)}
-"""
+                "answer": f"""To improve your resume for {title}:
+                - Add projects using: {', '.join(list(matched)[:3])}
+                - Focus on measurable results (accuracy, performance)
+                - Add GitHub + real-world work
+                Missing skills to include:{', '.join(missing)}"""
             }
 
         # 👉 JOB MATCH
         if "job" in question:
             return {
-                "answer": f"""
-Best role for you: {title}
-
-Matched skills:
-{', '.join(matched)}
-
-Missing skills:
-{', '.join(missing)}
-
-Salary: {salary}
-Experience: {exp_req}
-"""
+                "answer": f"""Best role for you: {title}
+                Matched skills:{', '.join(matched)}
+                Missing skills:{', '.join(missing)}
+                Salary: {salary}
+                Experience: {exp_req}"""
             }
 
         # 👉 SKILL IMPROVEMENT
         if "skill" in question or "improve" in question:
             return {
-                "answer": f"""
-To become {title}, focus on these missing skills:
-
-{', '.join(missing)}
-
-Keep practicing and build real projects.
-"""
+                "answer": f"""To become {title}, focus on these missing skills:{', '.join(missing)}
+                Keep practicing and build real projects."""
             }
 
         # 👉 DEFAULT
         return {
-            "answer": f"""
-Based on your profile, {title} is a strong career path.
-
-Matched skills:
-{', '.join(matched)}
-
-To improve:
-{', '.join(missing)}
-
-Next steps:
-- Learn advanced concepts
-- Build projects
-- Apply for internships
-
-Salary range: {salary}
-"""
+            "answer": f"""Based on your profile, {title} is a strong career path.
+            Matched skills:{', '.join(matched)}
+            To improve:{', '.join(missing)}
+            Next steps:
+            - Learn advanced concepts
+            - Build projects
+            - Apply for internships
+            Salary range: {salary}"""
         }

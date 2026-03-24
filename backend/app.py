@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import os
-
 # ===== IMPORTS =====
 from modules.skill_assessment_engine import SkillAssessmentEngine
 from modules.career_match_engine import CareerMatchEngine
@@ -25,7 +24,6 @@ from modules.mentor_memory_engine import MentorMemoryEngine
 
 app = Flask(__name__)
 CORS(app)
-
 # ===== INIT =====
 skill_engine = SkillAssessmentEngine()
 career_engine = CareerMatchEngine()
@@ -40,22 +38,16 @@ study_engine = StudyPlannerEngine()
 interview_engine = InterviewPreparationEngine()
 market_engine = JobMarketIntelligence()
 growth_engine = CareerGrowthEngine()
-
 github_engine = GitHubProfileAnalyzer()
 resume_engine = ResumeIntelligenceEngine()
 resume_match_engine = ResumeJobMatcher()
 portfolio_engine = PortfolioAnalyzer()
-
 mentor_engine = AICareerMentor()
 memory_engine = MentorMemoryEngine()
-
 # ================= CORE =================
 def generate_full_analysis(skills, experience):
-
     skill_score = len(skills) * 10
-
     jobs = job_engine.recommend(skills)
-
     career_match = [
         {
             "career": j["job_title"],
@@ -63,7 +55,6 @@ def generate_full_analysis(skills, experience):
         }
         for j in jobs
     ]
-
     best_career = career_match[0]["career"] if career_match else "AI Engineer"
 
     return {
@@ -82,7 +73,6 @@ def generate_full_analysis(skills, experience):
         "job_market_skill_demand": market_engine.skill_demand(),
         "job_market_city_demand": market_engine.city_demand()
     }
-
 # ================= API =================
 @app.route("/api/analyze", methods=["POST"])
 def analyze():
@@ -95,12 +85,9 @@ def analyze():
 def resume():
     file = request.files["resume"]
     parsed = resume_engine.analyze(file)
-
     skills = parsed["skills_analysis"]["detected_skills"]
     experience = parsed["experience_analysis"]["experience_years"]
-
     full = generate_full_analysis(skills, experience)
-
     return jsonify({
         "resume_analysis": parsed,
         **full
@@ -118,17 +105,12 @@ def portfolio():
 
 @app.route("/api/mentor", methods=["POST"])
 def mentor():
-
     data = request.json
-
     question = data.get("question", "")
     skills = data.get("skills", "")
     experience = data.get("experience", 0)
-
     answer = mentor_engine.ask(question, skills, experience)
-
     return jsonify(answer)
-
 # ================= FRONTEND =================
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
