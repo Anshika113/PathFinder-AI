@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PathFinder AI</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="dashboard.js"></script>
+
+<style>
+body{
+    font-family:Arial;
+    background:#f3f4f6;
+    padding:20px;
+}
+
+h1{margin-bottom:20px;}
+
+.top{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    height:280px;
+    display:flex;
+    flex-direction:column;
+}
+
+.content{
+    overflow:auto;
+    flex:1;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+canvas{
+    max-height:180px !important;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🚀 PathFinder AI</h1>
+
+<div class="top">
+    <input id="skills" placeholder="Python, SQL, ML">
+    <input id="experience" placeholder="Experience (years)">
+    <button onclick="analyze()">Analyze</button>
+</div>
+
+<div class="grid">
+
+<div class="card"><h3>Career Match</h3><canvas id="careerChart"></canvas></div>
+<div class="card"><h3>Career Growth</h3><canvas id="growthChart"></canvas></div>
+<div class="card"><h3>Market Demand</h3><canvas id="marketChart"></canvas></div>
+
+<div class="card"><h3>Skill Gap</h3><ul id="gap" class="content"></ul></div>
+<div class="card"><h3>Jobs</h3><ul id="jobs" class="content"></ul></div>
+<div class="card"><h3>Projects</h3><ul id="projects" class="content"></ul></div>
+
+<div class="card"><h3>Certifications</h3><ul id="certs" class="content"></ul></div>
+<div class="card"><h3>Resources</h3><ul id="resources" class="content"></ul></div>
+<div class="card"><h3>Study Plan</h3><ul id="study" class="content"></ul></div>
+
+<div class="card">
+<h3>Resume Analyzer</h3>
+<input type="file" id="resumeFile">
+<button onclick="uploadResume()">Analyze Resume</button>
+<div id="resumeResult" class="content"></div>
+</div>
+
+<div class="card">
+<h3>GitHub Analyzer</h3>
+<input id="githubUser" placeholder="GitHub Username">
+<button onclick="analyzeGithub()">Analyze</button>
+<div id="githubResult" class="content"></div>
+</div>
+
+<div class="card">
+<h3>Portfolio Analyzer</h3>
+<input id="portfolioInput" placeholder="Project URLs (comma-separated)">
+<button onclick="analyzePortfolio()">Analyze</button>
+<div id="portfolioResult" class="content"></div>
+</div>
+
+<div class="card">
+<h3>AI Mentor</h3>
+<input id="mentorQuestion" placeholder="Ask a question...">
+<button onclick="askMentor()">Ask</button>
+<div id="mentorAnswer" class="content"></div>
+</div>
+
+</div><!DOCTYPE html>
+<html>
+<head>
+<title>PathFinder AI</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="dashboard.js"></script>
+
+<style>
+
+/* ===== GLOBAL ===== */
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#eef2ff,#f8fafc);
+    margin:0;
+    padding:30px;
+    color:#1e293b;
+}
+
+h1{
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+/* ===== TOP BAR ===== */
+.top{
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.top input{
+    margin-bottom:10px;
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+    gap:20px;
+    align-items:stretch;   /* fix */
+}
+
+/* ===== CARD ===== */
+.card{
+    background:white;
+    padding:18px;
+    border-radius:16px;
+    display:flex;
+    flex-direction:column;
+    min-height:260px;   /* fix */
+    height:auto;        /* fix */
+    box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== CONTENT ===== */
+.content{
+    overflow:auto;
+    flex:1;
+    max-height:180px;
+}
+
+/* ===== INPUT ===== */
+input{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:1px solid #e2e8f0;
+    outline:none;
+    transition:0.2s;
+    box-sizing: border-box;
+}
+
+input:focus{
+    border-color:#6366f1;
+}
+
+/* ===== BUTTON ===== */
+button{
+    background: linear-gradient(135deg,#6366f1,#2563eb);
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+    transition:0.3s;
+    box-sizing: border-box;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+/* ===== LIST ===== */
+ul{
+    padding-left:18px;
+}
+
+li{
+    margin-bottom:6px;
+}
+
+/* ===== CHART ===== */
+canvas{
+    max-height:180px !important;
+}
+
+/* ===== RESULT BOX ===== */
+.result-box{
+    background:#f1f5f9;
+    padding:10px;
+    border-radius:8px;
+    font-size:14px;
+}
+
+</style>
+</head>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+"AI Engineer":["python","machine learning","deep learning","nlp","aws"],
+
+"Data Scientist":["python","statistics","machine learning","sql"],
+
+"Cloud Engineer":["aws","docker","kubernetes","linux"],
+
+"Web Developer":["html","css","javascript","react"],
+
+"Cyber Security Analyst":["network security","linux","penetration testing"]
+}

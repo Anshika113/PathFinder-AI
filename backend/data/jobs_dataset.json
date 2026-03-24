@@ -1,0 +1,269 @@
+[
+{
+"job_title":"AI Engineer",
+"required_skills":["python","machine learning","deep learning","nlp","aws"],
+"location":"Bangalore",
+"salary_range":"12-25 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Hybrid"
+},
+{
+"job_title":"Data Scientist",
+"required_skills":["python","statistics","machine learning","sql"],
+"location":"Hyderabad",
+"salary_range":"10-20 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Remote"
+},
+{
+"job_title":"Machine Learning Engineer",
+"required_skills":["python","machine learning","deep learning","tensorflow","pytorch","aws"],
+"location":"Bangalore",
+"salary_range":"14-28 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Software Engineer",
+"required_skills":["java","python","data structures","algorithms","system design"],
+"location":"Pune",
+"salary_range":"8-18 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"Cloud Engineer",
+"required_skills":["aws","docker","kubernetes","linux","terraform"],
+"location":"Hyderabad",
+"salary_range":"10-22 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"DevOps Engineer",
+"required_skills":["docker","kubernetes","jenkins","aws","ci cd"],
+"location":"Bangalore",
+"salary_range":"12-24 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Cyber Security Analyst",
+"required_skills":["network security","linux","siem","penetration testing","python"],
+"location":"Delhi",
+"salary_range":"8-18 LPA",
+"experience_required":"1-4 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"Web Developer",
+"required_skills":["html","css","javascript","react","nodejs"],
+"location":"Mumbai",
+"salary_range":"6-15 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Mobile Developer",
+"required_skills":["flutter","dart","android","ios","rest api"],
+"location":"Pune",
+"salary_range":"7-16 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Product Manager",
+"required_skills":["product strategy","market research","agile","analytics","roadmapping"],
+"location":"Bangalore",
+"salary_range":"18-35 LPA",
+"experience_required":"4-7 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Business Analyst",
+"required_skills":["sql","data analysis","excel","tableau","business intelligence"],
+"location":"Mumbai",
+"salary_range":"7-15 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"Data Analyst",
+"required_skills":["python","power bi","sql","excel","tableau","data visualization"],
+"location":["Hyderabad","Bangalore"],
+"salary_range":"6-14 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Blockchain Developer",
+"required_skills":["solidity","ethereum","smart contracts","web3","javascript"],
+"location":"Global Remote",
+"salary_range":"20-40 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Remote"
+},
+
+{
+"job_title":"Game Developer",
+"required_skills":["unity","c#","game design","3d graphics","physics engine"],
+"location":"Bangalore",
+"salary_range":"8-18 LPA",
+"experience_required":"1-4 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"Network Engineer",
+"required_skills":["networking","tcp ip","routing","switching","firewalls"],
+"location":"Delhi",
+"salary_range":"7-15 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"Database Engineer",
+"required_skills":["sql","database design","postgresql","mysql","performance tuning"],
+"location":"Chennai",
+"salary_range":"9-18 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Robotics Engineer",
+"required_skills":["robotics","python","ros","computer vision","embedded systems"],
+"location":"Bangalore",
+"salary_range":"12-26 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"AI Researcher",
+"required_skills":["deep learning","research","python","nlp","transformers"],
+"location":"Global Remote",
+"salary_range":"25-50 LPA",
+"experience_required":"3-6 years",
+"work_mode":"Remote"
+},
+
+{
+"job_title":"UI UX Designer",
+"required_skills":["figma","user research","wireframing","prototyping","design thinking"],
+"location":"Mumbai",
+"salary_range":"7-16 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"MLOps Engineer",
+"required_skills":["mlops","docker","kubernetes","aws","model deployment"],
+"location":"Hyderabad",
+"salary_range":"15-30 LPA",
+"experience_required":"3-5 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"AI Product Manager",
+"required_skills":["ai strategy","product management","machine learning","analytics"],
+"location":"Bangalore",
+"salary_range":"22-45 LPA",
+"experience_required":"5-8 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Computer Vision Engineer",
+"required_skills":["python","opencv","deep learning","cnn","pytorch"],
+"location":"Pune",
+"salary_range":"14-28 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"NLP Engineer",
+"required_skills":["python","nlp","transformers","bert","deep learning"],
+"location":"Global Remote",
+"salary_range":"18-35 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Remote"
+},
+
+{
+"job_title":"Embedded Systems Engineer",
+"required_skills":["c","c++","microcontrollers","iot","embedded linux"],
+"location":"Chennai",
+"salary_range":"8-18 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Onsite"
+},
+
+{
+"job_title":"AR VR Developer",
+"required_skills":["unity","c#","3d graphics","ar vr","game engines"],
+"location":"Bangalore",
+"salary_range":"10-22 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Site Reliability Engineer",
+"required_skills":["linux","kubernetes","aws","monitoring","automation"],
+"location":"Hyderabad",
+"salary_range":"16-32 LPA",
+"experience_required":"3-6 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Big Data Engineer",
+"required_skills":["spark","hadoop","python","data pipelines","kafka"],
+"location":"Bangalore",
+"salary_range":"14-28 LPA",
+"experience_required":"2-5 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"AI Solutions Architect",
+"required_skills":["aws","machine learning","cloud architecture","python"],
+"location":"Global Remote",
+"salary_range":"30-60 LPA",
+"experience_required":"6-10 years",
+"work_mode":"Remote"
+},
+
+{
+"job_title":"Data Engineer",
+"required_skills":["python","sql","etl pipelines","spark","data warehousing"],
+"location":"Pune",
+"salary_range":"12-24 LPA",
+"experience_required":"2-4 years",
+"work_mode":"Hybrid"
+},
+
+{
+"job_title":"Prompt Engineer",
+"required_skills":["llms","prompt engineering","python","nlp","ai systems"],
+"location":"Global Remote",
+"salary_range":"18-35 LPA",
+"experience_required":"1-3 years",
+"work_mode":"Remote"
+}
+]
